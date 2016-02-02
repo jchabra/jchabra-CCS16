@@ -1,63 +1,79 @@
 // Wall Drawing #17 (1969)
 // Four-part drawing with a different line direction in each part.
+
+var rectangleWidth = 175;
+var rectangleHeight = 470;
+
 function setup() {
   createCanvas(800,500);
 }
 
 function draw() {
-  background(255);
+  background(255);  
   noFill();
   strokeWeight("5");
   
+  var firstY1 = 15;
+  var firstY2 = 485;
   // first part
-  rect(15,15,175,470);
-  line(45,15,45,485);
-  line(65,15,65,485);
-  line(85,15,85,485);
-  line(105,15,105,485);
-  line(125,15,125,485);
-  line(145,15,145,485);
-  line(165,15,165,485);
+  rect(15,firstY1,rectangleWidth,rectangleHeight);
+  line(45,firstY1,45,firstY2);
+  line(65,firstY1,65,firstY2);
+  line(85,firstY1,85,firstY2);
+  line(105,firstY1,105,firstY2);
+  line(125,firstY1,125,firstY2);
+  line(145,firstY1,145,firstY2);
+  line(165,firstY1,165,firstY2);
   
+  var secondX1 = 210;
+  var secondX2 = 385;
+  var secondY1 = 15;
+  var secondY2 = 485;
   // second part
-  rect(210,15,175,470);
-  line(210,15,385,485);
-  line(240,15,385,400);
-  line(270,15,385,315);
-  line(300,15,385,230);
-  line(330,15,385,145);
-  line(210,90,355,485);
-  line(210,165,325,485);
-  line(210,240,295,485);
-  line(210,315,265,485);
+  rect(secondX1,secondY1,rectangleWidth,rectangleHeight);
+  line(secondX1,secondY1,secondX2,secondY2);
+  line(240,secondY1,secondX2,400);
+  line(270,secondY1,secondX2,315);
+  line(300,secondY1,secondX2,230);
+  line(330,secondY1,secondX2,145);
+  line(secondX1,90,355,secondY2);
+  line(secondX1,165,325,secondY2);
+  line(secondX1,240,295,secondY2);
+  line(secondX1,315,265,secondY2);
   
+  var thirdX1 = 580;
+  var thirdX2 = 405;
+  var thirdY1 = 15;
+  var thridY2 = 485;
   // third part
-  rect(405,15,175,470);
-  line(580,15,405,485);
-  line(550,15,405,400);
-  line(520,15,405,315);
-  line(490,15,405,230);
-  line(460,15,405,145);
-  line(580,90,435,485);
-  line(580,165,465,485);
-  line(580,245,495,485);
-  line(580,315,525,485);
+  rect(thirdX2,thirdY1,rectangleWidth,rectangleHeight);
+  line(thirdX1,thirdY1,thirdX2,thridY2);
+  line(550,thirdY1,thirdX2,400);
+  line(520,thirdY1,thirdX2,315);
+  line(490,thirdY1,thirdX2,230);
+  line(460,thirdY1,thirdX2,145);
+  line(thirdX1,90,435,thridY2);
+  line(thirdX1,165,465,thridY2);
+  line(thirdX1,245,495,thridY2);
+  line(thirdX1,315,525,thridY2);
   
+  var fourthX1 = 600;
+  var fourthX2 = 775;
   // fourth part
-  rect(600,15,175,470);
-  line(600,45,775,45);
-  line(600,75,775,75);
-  line(600,105,775,105);
-  line(600,135,775,135);
-  line(600,165,775,165);
-  line(600,195,775,195);
-  line(600,225,775,225);
-  line(600,255,775,255);
-  line(600,285,775,285);
-  line(600,315,775,315);
-  line(600,345,775,345);
-  line(600,375,775,375);
-  line(600,405,775,405);
-  line(600,435,775,435);
-  line(600,465,775,465);
+  rect(fourthX1,15,rectangleWidth,rectangleHeight);
+  line(fourthX1,45,fourthX2,45);
+  line(fourthX1,75,fourthX2,75);
+  line(fourthX1,105,fourthX2,105);
+  line(fourthX1,135,fourthX2,135);
+  line(fourthX1,165,fourthX2,165);
+  line(fourthX1,195,fourthX2,195);
+  line(fourthX1,225,fourthX2,225);
+  line(fourthX1,255,fourthX2,255);
+  line(fourthX1,285,fourthX2,285);
+  line(fourthX1,315,fourthX2,315);
+  line(fourthX1,345,fourthX2,345);
+  line(fourthX1,375,fourthX2,375);
+  line(fourthX1,405,fourthX2,405);
+  line(fourthX1,435,fourthX2,435);
+  line(fourthX1,465,fourthX2,465);
 }
