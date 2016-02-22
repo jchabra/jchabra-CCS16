@@ -1,3 +1,5 @@
+// Moire Sketch 1
+// By: Jasmine Chabra
 
 function setup() {
   createCanvas(500,500);
