@@ -40,6 +40,17 @@ function beagle() {
 	strokeWeight(30);//body width
 	line(0,-20,-65,-85);//body
   
+  // Left Ear
+  noStroke();
+  fill("#2e2726");
+  beginShape();
+  curveVertex(-184,  9);
+  curveVertex(184,  22);
+  curveVertex(68,  19);
+  curveVertex(-21,  17);
+  curveVertex(-32, 100);
+  curveVertex(32, 100);
+  endShape();
   
   //Eyes
   noStroke();
