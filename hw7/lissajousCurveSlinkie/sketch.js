@@ -1,13 +1,13 @@
 var waveLengthOne = 150.0;
-var waveLengthTwo = 200.0;
+var waveLengthTwo = 500.0;
 var pointCount = 0;
-var angle = 0.0;
-var amplitude = 200;
+var angle = 1.0;
+var amplitude = 300;
 function setup(){
   createCanvas(windowWidth,windowHeight);
 }
 function draw(){
-  if(pointCount > 1000){
+  if(pointCount > 3000){
     noLoop();
   }
   background(255);
