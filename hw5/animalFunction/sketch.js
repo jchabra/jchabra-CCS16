@@ -44,14 +44,29 @@ function beagle() {
   noStroke();
   fill("#2e2726");
   beginShape();
-  curveVertex(-184,  9);
-  curveVertex(184,  22);
-  curveVertex(68,  19);
-  curveVertex(-21,  17);
-  curveVertex(-32, 100);
-  curveVertex(32, 100);
+  vertex(150, -98);
+  bezierVertex(100, -180, 130, -215, 33, -240);
+  bezierVertex(170, -170, 0, -15, 90, 10);
   endShape();
   
+  beginShape();
+  vertex(149, -100);
+  bezierVertex(160, -70, 190, -40, 90, 10);
+  endShape();
+
+  // Right Ear
+  beginShape();
+  vertex(-150, -98);
+  bezierVertex(-100, -180, -130, -215, -33, -240);
+  bezierVertex(-170, -170, 0, 15, -90, 10);
+  endShape();
+  
+  beginShape();
+  vertex(-149, -100);
+  bezierVertex(-160, -70, -190, -40, -90, 10);
+  endShape();
+
+
   //Eyes
   noStroke();
 	fill("#352e2c");
