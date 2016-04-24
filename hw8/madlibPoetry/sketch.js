@@ -1,5 +1,5 @@
 //Testing with hardcoded text
-var lines = "FURNITURE: The institution of schools of art and design, and the efforts of serials and magazines devoted to artistic matters, have had their proper effect in the creation of a pretty general distaste for the clumsy and inartistic forms which characterised cabinets and furniture generally some years back.";
+var lines = "Sonnet 18 \r Shall I compare thee to a summer's day? \r Thou art more lovely and more temperate:\r Rough winds do shake the darling buds of May,\r And summer's lease hath all too short a date:\r Sometime too hot the eye of heaven shines,\r And often is his gold complexion dimm'd,\r And every fair from fair sometime declines,\r By chance, or nature's changing course untrimm'd:\r But thy eternal summer shall not fade,\r Nor lose possession of that fair thou ow'st,\r Nor shall death brag thou wander'st in his shade,\r When in eternal lines to time thou grow'st,\r So long as men can breathe, or eyes can see,\r So long lives this, and this gives life to thee.\r Author:William Shakespeare;"
 
 // var lines = [];//we declare lines as an empty array 
 var words = [];
