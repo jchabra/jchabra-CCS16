@@ -129,7 +129,7 @@ function draw() {
 function sayHelloUp() {
   push();
   isSayHelloUp = true;
-  textPos = height / 2;
+  textPos = height / 2 - 100;
   fontSize = 32;
   pop();
 }
