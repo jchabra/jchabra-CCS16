@@ -1,3 +1,13 @@
+/**
+* Project Title: IF I WERE ADELE SINGING HELLO...
+* Author: Jasmine Chabra
+* Description: The background colors change at 
+* certain points of the song. Each color 
+* coordinates with specific words and sounds
+* within the song.
+* 
+**/
+
 var video;
 var bgColor;
 var isSayHelloUp = false;
@@ -10,14 +20,11 @@ var downFontSize;
 function setup() {
   bgColor = color("lightGray");
   createCanvas(windowWidth, windowHeight);
-  // specify multiple formats for different browsers
   video = createVideo(['media/adele_hello.mp4']);
   video.loop(); // set the video to loop and start playing
-  video.volume(0.5); //we set the volume to 0 because we don't want
   //sound
+  video.volume(0.5); 
   video.showControls();
-  //a centered video element
-  // video.position(windowWidth/2 - (video.width/2),windowHeight/2 - (video.height/2));
   video.position(0, 150);
   video.size(windowWidth, windowHeight - 300);
   
@@ -35,66 +42,46 @@ function setup() {
   var magentaish = "#833a58";
   
   // up hello
-  video.addCue(5.0, sayHelloUp);
+  video.addCue(0.01, sayHelloUp);
   // orangish - hello
-  video.addCue(7.0, changeBgColor, color(orangish));
+  video.addCue(0.5, changeBgColor, color(orangish));
   // tealish - it's me
-  video.addCue(9.2, changeBgColor, color(tealish));
+  video.addCue(3.2, changeBgColor, color(tealish));
   // grayish - meet
-  video.addCue(17.7, changeBgColor, color(darkGrayish));
+  video.addCue(11.2, changeBgColor, color(darkGrayish));
   // purplish - everything
-  video.addCue(21.2, changeBgColor, color(purplish));
+  video.addCue(15.1, changeBgColor, color(purplish));
   // light green - they say
-  video.addCue(24.0, changeBgColor, color(lightGreenish));
+  video.addCue(17.8, changeBgColor, color(lightGreenish));
   // down hello
-  video.addCue(31.0, sayHelloDown);
+  video.addCue(24.8, sayHelloDown);
   // orangish - hello
-  video.addCue(31.0, changeBgColor, color(orangish));
+  video.addCue(24.8, changeBgColor, color(orangish));
   // tealish - can you hear me
-  video.addCue(33.8, changeBgColor, color(tealish));
+  video.addCue(27.5, changeBgColor, color(tealish));
   // yellow - i am in california
-  video.addCue(36.7, changeBgColor, color(yellow));
+  video.addCue(30.7, changeBgColor, color(yellow));
   // light green - when we were younger
-  video.addCue(42.8, changeBgColor, color(lightGreenish));
+  video.addCue(36.8, changeBgColor, color(lightGreenish));
   // blueish - and free
-  video.addCue(46.0, changeBgColor, color(blueish));
+  video.addCue(40.0, changeBgColor, color(blueish));
   // grayish - forgotten
-  video.addCue(49.2, changeBgColor, color(darkGrayish));
+  video.addCue(43.2, changeBgColor, color(darkGrayish));
   // pinkish - difference
-  video.addCue(55.7, changeBgColor, color(pinkish));
+  video.addCue(49.3, changeBgColor, color(pinkish));
   // greenish - million miles
-  video.addCue(61.7, changeBgColor, color(greenish));
+  video.addCue(55.4, changeBgColor, color(greenish));
   // HELLO FROM THE OTHER SIDE!!
   // up hello
-  video.addCue(66.3, sayHelloUp);
+  video.addCue(61.5, sayHelloUp);
   // down hello
-  video.addCue(68.0, sayHelloDown);
+  video.addCue(62.0, sayHelloDown);
   // orangish
-  video.addCue(68.0, changeBgColor, color(orangish));
+  video.addCue(61.3, changeBgColor, color(orangish));
   // blueish - must've called 
-  video.addCue(73.8, changeBgColor, color(blueish));
-  // magentaish - to tell you
-  video.addCue(79.0, changeBgColor, color(magentaish));
-  // tealish - but when
-  video.addCue(84.7, changeBgColor, color(tealish));
-  
-  // hello from the other side (2nd time)
-  // up hello
-  video.addCue(90.3, sayHelloUp);
-  // orangish - hello
-  video.addCue(92.3, changeBgColor, color(orangish));
-  // down hello
-  video.addCue(93.3, sayHelloDown);
-  // pinkish - at least i can say
-  video.addCue(98.3, changeBgColor, color(pinkish));
-  // yellow  - to tell you
-  video.addCue(103.5, changeBgColor, color(yellow));
-  // lightGreenish - breaking your heart 
-  video.addCue(107.2, changeBgColor, color(lightGreenish));
-  // tealish - dont matter
-  video.addCue(109.8, changeBgColor, color(tealish));
+  video.addCue(67.8, changeBgColor, color(blueish));
   // light gray - anymore
-  video.addCue(115.8, changeBgColor, color(lightGray));
+  video.addCue(72.0, changeBgColor, color(lightGray));
 
   textSize(32);
   textFont('Raleway');
@@ -104,6 +91,15 @@ function draw() {
   background(bgColor);
   // text("current video time: " + video.time(), 20, 32);
   // text("video duration: " + video.duration(), 20, 64);
+  push();
+  textAlign(CENTER);
+  text("IF I WERE ADELE SINGING 'HELLO'...", width/2, 32)
+  pop();
+  push();
+  textSize(12)
+  textAlign(CENTER);
+  text("Enjoy the experience with the volume up...", width/2, 50)
+  pop();
   if (isSayHelloUp) {
     if (textPos < 0) {
       isSayHelloUp = false;
@@ -125,7 +121,7 @@ function draw() {
     }
   }
 }
-
+// A text of Hello floats above the video
 function sayHelloUp() {
   push();
   isSayHelloUp = true;
@@ -133,17 +129,15 @@ function sayHelloUp() {
   fontSize = 32;
   pop();
 }
-
+// A text of Hello floats below the video
 function sayHelloDown() {
   push();
-  // frameRate(10);
   isSayHelloDown = true;
   downTextPos = height/2 + 275;
   downFontSize = 20;
-  
   pop();
 }
-
+// this changes the background color
 function changeBgColor(col) {
   bgColor = col;
 }
