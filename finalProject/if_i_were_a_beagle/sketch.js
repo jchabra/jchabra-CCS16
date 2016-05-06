@@ -1,27 +1,42 @@
+/**
+* Project Title: If I Were a Hungry Beagle
+* Author: Jasmine Chabra
+* Description: If I were a hungry beagle, my eyes would follow a bone.
+**/
+
 var xPosition = 0;
 var yPosition = 0;
-
+var bg;
+var bone;
+var img;
+//
 function preload(){
-  img = loadImage('images/beagle_body.png');
+  img = loadImage('images/beagle_body_blue.png');
+  bg = loadImage("images/background_image.png");
+  bone = loadImage("images/dog_bone.png");
 }
 function setup() {
   createCanvas(windowWidth,windowHeight); 
-  bg = loadImage("images/background_image.png");
-  bone = loadImage("images/dog_bone.png");
 }
 
 function draw(){
   background("#e8e6e6");
   image(bg,0,0,width);
+  push();
+  fill("#2e2726");
+  textSize(20);
+  textAlign(CENTER);
+  textFont("Open Sans");
+  text("IF I WERE A HUNGRY BEAGLE...", width/2, 30)
+  pop();
   beagle();
   dogBone();
-  
 }
 
 function beagle() {
   push();
-  translate(width/2, 400);
-  image(img,-150,-75, 345,265);
+  translate(width/2, 420);
+  image(img,-150,-80, 345,265);
 
   //Head
   noStroke();
@@ -31,14 +46,14 @@ function beagle() {
 
   //middle part of mouth
   ellipse(0, -65,145,130);
-  
+
   // tongue
   noStroke();
   fill("#cb736d");
-  ellipse(0, -45,65,130);
+  ellipse(0, -45,72,145);
   strokeWeight(2);
   stroke("#2e2726");
-  line(0,-15, 0, 5);
+  line(0,-15, 0, 7);
 
   // Left Ear
   noStroke();
@@ -80,8 +95,6 @@ function beagle() {
   //~White Part of the Eye
   noStroke();
   fill("#ffffff");
-  // ellipse(-50,-165,40,55);//left eye
-  // ellipse(50,-165,40,55);//right eye
   ellipse(-50,-165,50,50);//left eye
   ellipse(50,-165,50,50);//right eye
 
@@ -91,7 +104,7 @@ function beagle() {
   fill("#352e2c");
   ellipse(0,-65,65,35);//top of nose
   arc(0,-65,66,56,0,PI);//bottom of nose
-  
+
   pop();
 }
 
@@ -112,7 +125,7 @@ function eyeMovement() {
   fill("#352e2c");
   ellipse(-10,1,33,33);//left eye
   pop();
-  
+
   // RIGHT EYE
   push();
   translate(49, -163);
