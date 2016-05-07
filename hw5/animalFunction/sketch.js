@@ -2,7 +2,7 @@ var xPosition = 0;
 var yPosition = 0;
 
 function setup() {
-  createCanvas(500,500); 
+  createCanvas(windowWidth,windowHeight); 
 }
 
 function draw(){
@@ -13,11 +13,11 @@ function draw(){
 
 function beagle() {
   push();
-  translate(width/2,350);
+  translate(width/2, height/1.5);
 
   //Head
   noStroke();
-  fill("#c8602a");
+  fill("#a36d28");
   //top of head
   ellipse(0, -135, 205, 222);
 
@@ -69,19 +69,22 @@ function beagle() {
 
   //~Brown Part of the Eye
   fill("#352e2c");
-  ellipse(-50,-155,35,35);//left eye
-  ellipse(50,-155,35,35);//right eye
+  ellipse(-50,-154,34,34);//left eye
+  ellipse(50,-154,34,34);//right eye
 
-  //~White speck
+  // ~White speck
   fill("#ffffff");
-  ellipse(-57,-160,6,6);//left eye
-  ellipse(47,-160,6,6);//right eye
+  ellipse(-57,-150,6,6);//left eye
+  ellipse(43,-150,6,6);//right eye
+  
+  // Testing Eye Movement
+  // eyeMovement();
 
   //Nose
   fill("#352e2c");
   ellipse(0,-65,65,35);//top of nose
   arc(0,-65,66,56,0,PI);//bottom of nose
-
+  
   pop();
 }
 
@@ -92,4 +95,24 @@ function talkingDog(greeting) {
   textSize(20);
   text(greeting, xRandom, yRandom, width, height);
 }
+
+// function eyeMovement() {
+//   fill("#ffffff");
+//   var a = atan2(height/2-mouseY, width/2-mouseX);
+//   push();
+//   translate(-57, -150);
+//   // fill(0);
+//   // ellipse(0, -5, 200, 200);
+//   // fill(255);
+//   rotate(a);
+//   ellipse(-5,3,6,6);//left eye
+//   // ellipse(-57,-150,6,6);//left eye
+//   // ellipse(-30, -5, 30, 30);
+//   pop();
+  
+//   push();
+//   translate(43, -150);
+//   ellipse(0,0,6,6);//right eye
+//   pop();
+// }
 
