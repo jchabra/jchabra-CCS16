@@ -6,6 +6,7 @@ var words = [];
 var partsOfSpeech = [];
 var lexicon;
 var finalSonnet;
+var replaceWords = [];
 
 function preload(){
   //loadStrings returns an array of Strings from our text file
@@ -38,12 +39,13 @@ function draw(){
   text("MadLib Text:", 0,0,width,height);
   pop();
   translate(0,30);
-  
+  replaceWords.length = 0;
   for(var i=0; i < words.length; i++){
     //we check whether each parts of speech exists
     //in our array
     if( partsOfSpeech[i] !== null){
       if(partsOfSpeech[i] === 'nn') {
+        replaceWords.push(i);
         words[i] = lexicon.randomWord('nn') + " ";
       } else if (partsOfSpeech[i] === 'jj') {
         words[i] = lexicon.randomWord('jj') + " ";
