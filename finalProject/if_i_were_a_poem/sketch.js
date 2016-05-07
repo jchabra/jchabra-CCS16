@@ -12,6 +12,7 @@ var partsOfSpeech = [];
 var lexicon;
 var replaceWords = [];
 var bgImage;
+var newWords = [];
 
 function preload(){
   //loadStrings returns an array of Strings from our text file
@@ -27,14 +28,15 @@ function setup() {
   //this function expects a String as parameter,
   //not an array
   var joinedLines = lines.join('\n');
-  words = RiTa.tokenize(joinedLines);
+  replStr=joinedLines.replace(/\n/g,' # ');
+  words = RiTa.tokenize(replStr);
   partsOfSpeech = RiTa.getPosTags(words);
-  frameRate(.5);
+  frameRate(0.2);
 }
 
 function draw(){
   background(255);
-  image(bgImage, windowWidth/5, 200);
+  image(bgImage, windowWidth/6, 200);
   
   var wordPosX = 0;
   var wordPosY = width/4;
@@ -61,7 +63,9 @@ function draw(){
   }
   //render the text only once per draw loop
   push();
+  newWords = words.join(' ');
+  newWords=newWords.replace(/ # /g,'\n');
   textSize(20)
-  text(words.join(' '), 0, 0, 300, 500);
+  text(newWords, 0, 0, 500, 500);
   pop();
 }
