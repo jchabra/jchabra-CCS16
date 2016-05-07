@@ -12,13 +12,14 @@ function setup() {
   textFont("Open Sans");
   textSize(28);
   // adding background image
-  bg = loadImage("assets/coffee.jpeg");
+  bg = loadImage("images/coffee.jpeg");
   // heading for the chart
   h1 = createElement('h1','HOURS OF SLEEP 4/18/16 - 4/24/16');
 }
 
 function draw(){
-  background(bg);
+  background(255);
+  image(bg,-110,0, windowWidth+200, windowHeight);
   noStroke();
   translate(30,30);
   for(var c =0; c < table.getColumnCount(); c++){
