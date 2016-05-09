@@ -36,12 +36,12 @@ function setup() {
 
 function draw(){
   background(255);
-  image(bgImage, windowWidth/6, 200);
+  image(bgImage, windowWidth/6, 250);
   
   var wordPosX = 0;
   var wordPosY = width/4;
   fill(0, 102, 153)
-  translate(windowWidth/4,30);
+  translate(windowWidth/4,150);
   fill(129, 100, 162);
   
   push();
